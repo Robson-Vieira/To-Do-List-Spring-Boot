@@ -14,14 +14,13 @@ public class SwaggerConfig {
 	public OpenAPI customOpenAPI() {
 		return new OpenAPI()
 			.info(new Info()
-				.title("RESTful API with Java 21 and Spring Boot 3")
+				.title("Rest API com Java 21 e Spring Boot 3.")
 				.version("v1")
-				.description("Some description about your API")
-				.termsOfService("https://pub.erudio.com.br/meus-cursos")
+				.description("A API permite que o usuario gerencie suas tarefas de maneira simples e facil, permitindo a criação, atualização, deleção e a listagem das mesmas.")
 				.license(
 					new License()
 						.name("Apache 2.0")
-						.url("https://pub.erudio.com.br/meus-cursos")
+						.url("")
 					)
 				);
 	}
