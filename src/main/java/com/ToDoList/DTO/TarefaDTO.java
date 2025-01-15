@@ -3,8 +3,8 @@ package com.ToDoList.DTO;
 import java.util.Date;
 import java.util.Objects;
 
-import com.ToDoList.Model.Prioridade;
-import com.ToDoList.Model.Status;
+import com.ToDoList.Model.Tarefas.Prioridade;
+import com.ToDoList.Model.Tarefas.Status;
 
 public class TarefaDTO {
 

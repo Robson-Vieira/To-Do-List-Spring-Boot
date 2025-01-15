@@ -1,4 +1,4 @@
-package com.ToDoList.Model;
+package com.ToDoList.Model.Tarefas;
 
 import java.io.Serializable;
 import java.util.Date;

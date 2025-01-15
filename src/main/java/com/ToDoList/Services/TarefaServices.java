@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.ToDoList.Config.ModelMapperConfig;
 import com.ToDoList.DTO.TarefaDTO;
 import com.ToDoList.Exceptions.TarefaNotFoundException;
-import com.ToDoList.Model.Tarefa;
+import com.ToDoList.Model.Tarefas.Tarefa;
 import com.ToDoList.Repositories.TarefaRepository;
 
 @Service
