@@ -31,7 +31,11 @@ public class Usuarios  implements UserDetails {
 	private Permissao permissao;
 
 	public Usuarios() {}
-	
+	public Usuarios(String nome,String senha,Permissao permissao) {
+		this.nome = nome;
+		this.senha = senha;
+		this.permissao = permissao;
+	}
 	public Usuarios(Long id,String nome,String senha,Permissao permissao) {
 		this.id =id;
 		this.nome=nome;
