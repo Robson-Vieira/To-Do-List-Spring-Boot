@@ -2,54 +2,46 @@ package com.ToDoList.DTO.Credenciais;
 
 import java.util.Objects;
 
-import com.ToDoList.Model.Users.Permissao;
+import com.ToDoList.Model.Users.Permission;
 
 public class CredenciaisRegisterDTO {
 
-	private String nome;
-	private String senha;
-	private Permissao permissao;
-
-	public CredenciaisRegisterDTO(String nome, String senha, Permissao permissao) {
-		super();
-		this.nome = nome;
-		this.senha = senha;
-		this.permissao = permissao;
+	private String username;
+	private String password;
+	private Permission permission;
+	
+	public CredenciaisRegisterDTO(String username, String password, Permission permission) {
+		this.username = username;
+		this.password = password;
+		this.permission = permission;
 	}
-
-	public CredenciaisRegisterDTO() {
-		super();
+	
+	public CredenciaisRegisterDTO() {}
+	
+	public String getUsername() {
+		return username;
 	}
-
-	public String getNome() {
-		return nome;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	public String getPassword() {
+		return password;
 	}
-
-	public String getSenha() {
-		return senha;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public Permission getPermission() {
+		return permission;
 	}
-
-	public Permissao getPermissao() {
-		return permissao;
+	public void setPermission(Permission permission) {
+		this.permission = permission;
 	}
-
-	public void setPermissao(Permissao permissao) {
-		this.permissao = permissao;
-	}
-
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(nome, permissao, senha);
+		return Objects.hash(password, permission, username);
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -59,7 +51,7 @@ public class CredenciaisRegisterDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		CredenciaisRegisterDTO other = (CredenciaisRegisterDTO) obj;
-		return Objects.equals(nome, other.nome) && permissao == other.permissao && Objects.equals(senha, other.senha);
+		return Objects.equals(password, other.password) && permission == other.permission
+				&& Objects.equals(username, other.username);
 	}
-
 }

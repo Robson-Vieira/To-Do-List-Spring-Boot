@@ -6,18 +6,18 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.ToDoList.Repositories.UsuariosRepository;
+import com.ToDoList.Repositories.UserRepository;
 
 @Service
-public class UsuariosService implements UserDetailsService {
+public class UserService implements UserDetailsService {
 
 	@Autowired
-	private UsuariosRepository repository;
+	private UserRepository repository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		UserDetails user = repository.FindByUsername(username);
-		return user;
+		 
+		return repository.findByUsername(username); 
 	}
 
 }

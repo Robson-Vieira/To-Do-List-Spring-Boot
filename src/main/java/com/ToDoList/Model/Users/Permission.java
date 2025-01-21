@@ -1,6 +1,6 @@
 package com.ToDoList.Model.Users;
 
-public enum Permissao {
+public enum Permission {
 
 	ROLE_ADMIN,
 	ROLE_USER

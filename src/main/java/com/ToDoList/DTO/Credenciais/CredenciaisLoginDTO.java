@@ -4,38 +4,32 @@ import java.util.Objects;
 
 public class CredenciaisLoginDTO {
 
-	private String nome;
-	private String senha;
-
-	public CredenciaisLoginDTO(String nome, String senha) {
-		this.nome = nome;
-		this.senha = senha;
+	private String username;
+	private String password;
+	public CredenciaisLoginDTO(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
 	}
-
-	public CredenciaisLoginDTO() {	
+	public CredenciaisLoginDTO() {
+		super();
 	}
-
-	public String getNome() {
-		return nome;
+	public String getUsername() {
+		return username;
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-
-	public String getSenha() {
-		return senha;
+	public String getPassword() {
+		return password;
 	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-
 	@Override
 	public int hashCode() {
-		return Objects.hash(nome, senha);
+		return Objects.hash(password, username);
 	}
-
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -45,7 +39,6 @@ public class CredenciaisLoginDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		CredenciaisLoginDTO other = (CredenciaisLoginDTO) obj;
-		return Objects.equals(nome, other.nome) && Objects.equals(senha, other.senha);
+		return Objects.equals(password, other.password) && Objects.equals(username, other.username);
 	}
-
 }

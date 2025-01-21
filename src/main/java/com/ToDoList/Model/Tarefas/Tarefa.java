@@ -31,7 +31,7 @@ public class Tarefa implements Serializable {
 	
 	@NotBlank
 	private Date prazo;							// PENSAR EM UM ENDPOINT PARA ESTENDER O PRAZO 
-	
+												// POR ENQUANTO PRECISA SER PASSADO UMA DATA DE VALIDADE
 	@NotBlank
 	private String descricao;                      
 	
