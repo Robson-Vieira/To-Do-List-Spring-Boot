@@ -118,7 +118,6 @@ public class User implements Serializable, UserDetails{
 
 	@Override
 	public String getUsername() {
-		// TODO Auto-generated method stub
 		return username;
 	}
 

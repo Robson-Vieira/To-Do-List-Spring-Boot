@@ -1,9 +1,8 @@
 package com.ToDoList.Services;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.ToDoList.Config.ModelMapperConfig;
@@ -26,10 +25,13 @@ public class TarefaServices {
 		 return dto;
 	}
 	
-	public List<TarefaDTO> buscarTodos() {
-		List<TarefaDTO> lista = ModelMapperConfig.
-				converteListas(repository.findAll(), TarefaDTO.class);
-		return lista;
+	public Page<TarefaDTO> buscarTodos(PageRequest pageble) {
+		
+		var tarefaPage = repository.findAll(pageble);
+		
+		var tarefaDTOsPage = tarefaPage.map(o ->  ModelMapperConfig.converteObjetos(o, TarefaDTO.class));
+	
+		return tarefaDTOsPage;
 	}
 	
 	public TarefaDTO criarTarefa(TarefaDTO tarefa) {
